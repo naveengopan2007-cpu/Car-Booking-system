@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickRide | Explore Car Models</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fb;
+      color: #333;
+    }
+
+    header {
+      background-color: #111;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.4rem;
+      font-weight: 600;
+    }
+
+    header p {
+      color: #bbb;
+      font-size: 1rem;
+    }
+
+    /* Back to Home Button */
+    .back-home {
+      display: inline-block;
+      margin: 15px auto;
+      background: linear-gradient(to right, #10b981, #059669);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+    .back-home:hover {
+      opacity: 0.9;
+      transform: scale(1.05);
+    }
+
+    /* Filter bar */
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      background:url("C:\Users\navee\OneDrive\Pictures\mercedes-benz-g-4480x2520-14836.jpg") no-repeat right 10px center;
+      padding: 15px 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin: 30px auto;
+      width: 90%;
+      border-radius: 10px;
+    }
+
+    .filter-bar select {
+      padding: 10px 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .filter-bar select:hover {
+      border-color: #111;
+    }
+
+    /* Car brand grid */
+    .brand-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      padding: 30px 40px;
+    }
+
+    .brand-card {
+      background-color: #fff;
+      width: 180px;
+      height: 180px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .brand-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .brand-card img {
+      width: 70px;
+      height: 70px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+
+    .brand-card h3 {
+      font-size: 1rem;
+      color: #222;
+      margin: 0;
+      text-align: center;
+      font-weight: 500;
+    }
+
+    footer {
+      background-color: #111;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      margin-top: 40px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .filter-bar {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .brand-card {
+        width: 45%;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .brand-card {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body background="C:\Users\navee\OneDrive\Pictures\luxury-car-showroom-with-highend-vehicles-gleaming-bright-showroom-lights_1154909-1493.avif">
+
+  <header background="C:\Users\navee\OneDrive\Pictures\black-g-wagon-4k-2020-71.jpg">
+    <h1>Explore Our Car Models</h1>
+    <p>Filter and find your dream car by brand, type, or fuel</p>
+
+    <!-- Back to Home Button (Add your link below) -->
+    <a href="C:\Users\navee\OneDrive\Documents\1stpage.html" class="back-home">← Back to Home</a>
+  </header>
+
+  <!-- Filter Bar -->
+  <div class="filter-bar">
+    <select id="brandFilter">
+      <option value="">Brand</option>
+      <option value="audi">Audi</option>
+      <option value="bmw">BMW</option>
+      <option value="mercedes">Mercedes-Benz</option>
+      <option value="porsche">Porsche</option>
+      <option value="toyota">Toyota</option>
+    </select>
+
+    <select id="priceFilter">
+      <option value="">Price Range</option>
+      <option value="20-40">₹20L - ₹40L</option>
+      <option value="40-60">₹40L - ₹60L</option>
+      <option value="60-100">₹60L - ₹1Cr</option>
+      <option value="100+">₹1Cr+</option>
+    </select>
+
+    <select id="bodyFilter">
+      <option value="">Body Type</option>
+      <option value="suv">SUV</option>
+      <option value="sedan">Sedan</option>
+      <option value="coupe">Coupe</option>
+      <option value="hatchback">Hatchback</option>
+    </select>
+
+    <select id="fuelFilter">
+      <option value="">Fuel Type</option>
+      <option value="petrol">⛽Petrol</option>
+      <option value="diesel">🛢️Diesel</option>
+      <option value="hybrid">🔋Hybrid</option>
+      <option value="electric">⚡Electric</option>
+    </select>
+
+    <select id="yearFilter">
+      <option value="">Year</option>
+      <option value="2025">2025</option>
+      <option value="2024">2024</option>
+      <option value="2023">2023</option>
+      <option value="2022">2022</option>
+    </select>
+  </div>
+
+  <!-- Brand Grid -->
+  <div class="brand-container">
+    <div class="brand-card" onclick="location.href='C:/Users/navee/OneDrive/Documents/maserati.html'">
+      <img src="C:\Users\navee\OneDrive\Pictures\Maserati-Logo-PNG-Images-HD.png" alt="Maserati">
+      <h3>MASERATI</h3>
+    </div>
+
+    <div class="brand-card" onclick="location.href='C:/Users/navee/OneDrive/Documents/bmw.html'">
+      <img src="C:\Users\navee\OneDrive\Pictures\bmw-logo-vector-bmw-logo-symbol-trademark-emblem-transparent-png-104557.png" alt="BMW">
+      <h3>BMW</h3>
+    </div>
+
+    <div class="brand-card" onclick="location.href='C:/Users/navee/OneDrive/Documents/BENZ.HTML'">
+      <img src="C:\Users\navee\OneDrive\Pictures\OIP (1).jpg" alt="Mercedes-Benz">
+      <h3>MERCEDES-BENZ</h3>
+    </div>
+
+    <div class="brand-card" onclick="location.href='brand/porsche.html'">
+      <img src="C:\Users\navee\OneDrive\Pictures\porsche-logo-transparent-3.png" alt="Porsche">
+      <h3>PORSCHE</h3>
+    </div>
+
+    <div class="brand-card" onclick="location.href='brand/audi.html'">
+      <img src="C:\Users\navee\OneDrive\Pictures\OIP.jpg" alt="Audi">
+      <h3>AUDI</h3>
+    </div>
+
+    <div class="brand-card" onclick="location.href='brand/rollsroyce.html'">
+      <img src="C:\Users\navee\OneDrive\Pictures\OIP (6).jpg" alt="Rolls Royce">
+      <h3>ROLLS ROYCE</h3>
+    </div>
+
+    <div class="brand-card" onclick="location.href='brand/toyota.html'">
+      <img src="C:\Users\navee\OneDrive\Pictures\toyota-logo-main-1.png" alt="Toyota">
+      <h3>TOYOTA</h3>
+    </div>
+
+    <div class="brand-card" onclick="location.href='brand/landrover.html'">
+      <img src="C:\Users\navee\OneDrive\Pictures\OIP (2).jpg" alt="Land Rover">
+      <h3>LAND ROVER</h3>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 QuickRide Premium Motors. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

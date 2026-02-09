@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QuickRide | Premium Car Showroom</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    header {
+      background:url("C:/Users/navee/Downloads/ChatGPT Image Nov 6, 2025, 02_21_33 PM.png") no-repeat center center;
+      background-color: #111;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    nav {
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 1rem 0;
+    }
+
+    nav a {
+      color: white;
+      background-color: rgba(0, 0, 0, 0.6);
+      margin: 0.5rem;
+      padding: 0.8rem 1.5rem;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #ff6600;
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    section {
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      font-size: 0.9rem;
+    }
+
+    /* ---------------------- CAR GALLERY SLIDER ---------------------- */
+    .gallery-container {
+      width: 90%;
+      margin: auto;
+      margin-top: 50px;
+    }
+
+    .car-slider {
+      width: 100%;
+      height: 380px;
+      overflow: hidden;
+      position: relative;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .slides {
+      display: flex;
+      width: 500%;
+      animation: slide 18s infinite linear;
+    }
+
+    .slides img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+    }
+
+    @keyframes slide {
+      0% { transform: translateX(0%); }
+      20% { transform: translateX(0%); }
+      25% { transform: translateX(-100%); }
+      45% { transform: translateX(-100%); }
+      50% { transform: translateX(-200%); }
+      70% { transform: translateX(-200%); }
+      75% { transform: translateX(-300%); }
+      95% { transform: translateX(-300%); }
+      100% { transform: translateX(-400%); }
+    }
+
+    .car-title {
+      font-size: 26px;
+      font-weight: bold;
+      margin-top: 10px;
+      color: #222;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>QuickRide</h1>
+    <p>Your Destination for Premium Cars</p>
+  </header>
+
+  <nav>
+    <a href="C:\Users\navee\OneDrive\Documents\ajaxregister.html">Register</a>
+    <a href="C:\Users\navee\OneDrive\Documents\models.html">Models</a>
+    <a href="#gallery">Gallery</a>
+    <a href="C:\Users\navee\OneDrive\Documents\booking.html">Booking</a>
+    <a href="#testdrive">Test Drive</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <marquee behavior="scroll" direction="left" scrollamount="12" style="padding:20px 0; background-color:white;">
+    <img src="C:\Users\navee\OneDrive\Pictures\OIP.jpg" height="60" style="margin-right:80px;">
+    <img src="C:\Users\navee\OneDrive\Pictures\bmw-logo-vector-bmw-logo-symbol-trademark-emblem-transparent-png-104557.png" height="60" style="margin-right:80px;">
+    <img src="C:\Users\navee\OneDrive\Pictures\OIP (1).jpg" height="60" style="margin-right:80px;">
+    <img src="C:\Users\navee\OneDrive\Pictures\toyota-logo-main-1.png" height="60" style="margin-right:80px;">
+    <img src="C:\Users\navee\OneDrive\Pictures\bentley_PNG34.png" height="60" style="margin-right:80px;">
+    <img src="C:\Users\navee\OneDrive\Pictures\Maserati-Logo-PNG-Images-HD.png" height="60" style="margin-right:80px;">
+  </marquee>
+
+  <!-- Home Section -->
+  <section>
+    <h2>Welcome to QuickRide</h2>
+    <p>Explore luxury, comfort, and performance in every model.</p>
+
+    <img src="C:\Users\navee\OneDrive\Documents\giphy.gif">
+  </section>
+
+  
+  <section id="gallery">
+    <h2 style="font-size:32px; margin-bottom:20px;"><u>Premium Car Gallery</u></h2>
+
+    <!-- Car 1 -->
+    <div class="gallery-container">
+      <div class="car-slider">
+        <div class="slides">
+          <img src="C:\Users\navee\OneDrive\Pictures\1389985-Audi-Audi-A6-Audi-A6-S-Line-Car-Luxury-Car-Red.jpg">
+          <img src="C:\Users\navee\OneDrive\Pictures\OIP (24).jpg">
+          <img src="C:\Users\navee\OneDrive\Pictures\maxresdefault.jpg">
+          <img src="C:\Users\navee\OneDrive\Pictures\OIP (24).jpg">
+          <img src="C:\Users\navee\OneDrive\Pictures\maxresdefault.jpg">
+        </div>
+      </div>
+      <p class="car-title">Audi A6 | Luxury Sedan</p>
+    </div>
+
+    <br><br>
+
+    <!-- Car 2 -->
+    <div class="gallery-container">
+      <div class="car-slider">
+        <div class="slides">
+          <img src="C:\Users\navee\OneDrive\Pictures\OIP (23).jpg">
+          <img src="C:\Users\navee\Downloads\m5-bmw-e392-1737468206.jpg">
+          <img src="C:\Users\navee\Downloads\new-BMW-M5-and-M5-Competition-web2.jpg">
+          <img src="C:\Users\navee\Downloads\new-bmw-m5-f90-competition-600nw-1982713193.webp">
+          <img src="C:\Users\navee\OneDrive\Pictures\OIP (23).jpg">
+        </div>
+      </div>
+      <p class="car-title">BMW M5 Competition</p>
+    </div>
+
+    <br><br>
+
+  </section>
+
+
+  <footer>
+    <p>&copy; 2025 QuickRide Premium Motors. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
