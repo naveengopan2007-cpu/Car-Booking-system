@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMW Models | QuickRide</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: url("C:/Users/navee/OneDrive/Pictures/tumblr_mdk023YxI01r2k05xo1_500.gif") no-repeat center center fixed;
+      background-size: cover;
+      color: #222;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.85);
+      color: #fff;
+      text-align: center;
+      padding: 20px 10px;
+      position: relative;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+      letter-spacing: 1px;
+    }
+
+    .back-btn {
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      background-color: #fff;
+      color: #111;
+      padding: 8px 16px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .back-btn:hover {
+      background-color: #ddd;
+    }
+
+    .car-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 30px;
+    }
+
+    .car-card {
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+      width: 320px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .car-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .slider {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .slider img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: none;
+    }
+
+    .slider img.active {
+      display: block;
+    }
+
+    .car-details {
+      padding: 20px;
+      text-align: left;
+    }
+
+    .car-details h2 {
+      margin: 0 0 10px;
+      color: #111;
+      font-size: 1.4rem;
+    }
+
+    .car-info {
+      font-size: 0.95rem;
+      color: #444;
+      margin-bottom: 6px;
+    }
+
+    .price {
+      font-size: 1.3rem;
+      color: #007bff;
+      font-weight: 700;
+      margin-top: 12px;
+      text-align: right;
+    }
+
+    footer {
+      background-color: rgba(0,0,0,0.85);
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      .car-card {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <button class="back-btn" onclick="location.href='C:\\Users\\navee\\OneDrive\\Documents\\1stpage.html'">← Back to Home</button>
+    <h1>Masersaatii</h1>
+  </header>
+
+  <div class="car-section">
+
+    <div class="car-card">
+      <div class="slider" id="levante-slider">
+        <img src="C:\Users\navee\OneDrive\Pictures\MASERATI-Levante-5589_33.jpg" class="active">
+        <img src="C:\Users\navee\OneDrive\Pictures\OIP (11).jpg">
+        <img src="C:\Users\navee\OneDrive\Pictures\MASERATI-Levante-5589_33.jpg" >
+      </div>
+      <div class="car-details">
+        <h2>Maserati Lavante</h2>
+        <p class="car-info"><strong>Fuel:</strong> Petrol/diesel</p>
+        <p class="car-info"><strong>Power:</strong>300cc/p>
+        <p class="car-info"><strong>BHP:</strong> 210</p>
+        <p class="car-info"><strong>Mileage:</strong> 9.12km/l</p>
+        <p class="price">58 lakhs</p>
+      </div>
+    </div>
+
+    <div class="car-card">
+      <div class="slider" id="ghibli-slider">
+        <img src="C:\Users\navee\OneDrive\Pictures\OIP (12).jpg" class="active">
+        <img src="C:\Users\navee\OneDrive\Pictures\OIP (12).jpg">
+        <img src="C:\Users\navee\OneDrive\Pictures\OIP (13).jpg">
+      </div>
+      <div class="car-details">
+        <h2>ventedeee</h2>
+        <p class="car-info"><strong>Fuel:</strong> Petrol/diesel</p>
+        <p class="car-info"><strong>Power:</strong> 3190cc</p>
+        <p class="car-info"><strong>BHP:</strong> 189</p>
+        <p class="car-info"><strong>Mileage:</strong> 14</p>
+        <p class="price">63 lakhs</p>
+      </div>
+    </div>
+
+    
+    <div class="car-card">
+      <div class="slider" id="quattroporte-slider">
+        <img src="C:\Users\navee\OneDrive\Pictures\OIP (17).jpg" class="active">
+        <img src="C:\Users\navee\OneDrive\Pictures\OIP (16).jpg">
+        <img src="C:\Users\navee\OneDrive\Pictures\OIP (17).jpg">
+      </div>
+      <div class="car-details">
+        <h2>maserati watee</h2>
+        <p class="car-info"><strong>Fuel:</strong> petrol</p>
+        <p class="car-info"><strong>Power:</strong> 4020 cc</p>
+        <p class="car-info"><strong>BHP:</strong> 500</p>
+        <p class="car-info"><strong>Mileage:</strong> 18 km/l</p>
+        <p class="price">₹40,00,000</p>
+      </div>
+    </div>
+
+
+    <div class="car-card">
+      <div class="slider" id="mc20-slider">
+        <img src="C:\Users\navee\OneDrive\Pictures\OIP (14).jpg" class="active">
+        <img src="C:\Users\navee\OneDrive\Pictures\OIP (14).jpg">
+        <img src="C:\Users\navee\OneDrive\Pictures\OIP (15).jpg">
+      </div>
+      <div class="car-details">
+        <h2>maseratin quattero</h2>
+        <p class="car-info"><strong>Fuel:</strong> Petrol/diesel</p>
+        <p class="car-info"><strong>Power:</strong> 2600 cc</p>
+        <p class="car-info"><strong>BHP:</strong> 189</p>
+        <p class="car-info"><strong>Mileage:</strong> 14 km/l</p>
+        <p class="price">₹38,00,000</p>
+      </div>
+    </div>
+
+
+    <div class="car-card">
+      <div class="slider" id="granturismo-slider">
+        <img src="C:\Users\navee\OneDrive\Pictures\OIP (19).jpg" class="active">
+      
+        <img src="C:\Users\navee\OneDrive\Pictures\OIP (19).jpg">
+        <img src="C:\Users\navee\OneDrive\Pictures\OIP (18).jpg">
+      </div>
+      <div class="car-details">
+        <h2>quador</h2>
+        <p class="car-info"><strong>Fuel:</strong> Hybrid</p>
+        <p class="car-info"><strong>Power:</strong> 3293</p>
+        <p class="car-info"><strong>BHP:</strong> 295</p>
+        <p class="car-info"><strong>Mileage:</strong> 10-12 km/l</p>
+        <p class="price">52 lakhss</p>
+      </div>
+    </div>
+
+  </div>
+  <footer>
+    <p>&copy; 2025 QuickRide Premium Motors. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function createSlider(id) {
+      const slider = document.getElementById(id);
+      const images = slider.getElementsByTagName('img');
+      let index = 0;
+      setInterval(() => {
+        images[index].classList.remove('active');
+        index = (index + 1) % images.length;
+        images[index].classList.add('active');
+      }, 2500);
+    }
+
+    createSlider('levante-slider');
+    createSlider('ghibli-slider');
+    createSlider('quattroporte-slider');
+    createSlider('mc20-slider');
+    createSlider('granturismo-slider');
+    createSlider('grecale-slider');
+  </script>
+</body>
+</html>

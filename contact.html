@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>QuickRide | Contact Us</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+/* Contact Card */
+.contact-container {
+  width: 90%;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* Title */
+.contact-container h1 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+
+.contact-container p {
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 25px;
+}
+
+/* Inputs */
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.input-group textarea {
+  resize: none;
+  height: 100px;
+}
+
+/* Rating */
+.rating {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  font-size: 30px;
+  color: #555;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+  color: gold;
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, gold, #ffcc00);
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(255,215,0,0.5);
+}
+
+/* Footer text */
+.footer-text {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 12px;
+  opacity: 0.7;
+}
+</style>
+</head>
+
+<body>
+
+<div class="contact-container">
+  <h1>QUICKRIDE</h1>
+  <p>Luxury Car Booking – Contact Us</p>
+
+  <form>
+    <div class="input-group">
+      <label>Your Name</label>
+      <input type="text" placeholder="Enter your name" required>
+    </div>
+
+    <div class="input-group">
+      <label>Email Address</label>
+      <input type="email" placeholder="Enter your email" required>
+    </div>
+
+    <div class="input-group">
+      <label>Your Message</label>
+      <textarea placeholder="Write your message or feedback here..." required></textarea>
+    </div>
+
+    <label style="text-align:center;display:block;margin-bottom:8px;">
+      Rate Your Experience
+    </label>
+
+    <div class="rating">
+      <input type="radio" name="rating" id="star5"><label for="star5">★</label>
+      <input type="radio" name="rating" id="star4"><label for="star4">★</label>
+      <input type="radio" name="rating" id="star3"><label for="star3">★</label>
+      <input type="radio" name="rating" id="star2"><label for="star2">★</label>
+      <input type="radio" name="rating" id="star1"><label for="star1">★</label>
+    </div>
+
+    <button type="submit">Send Message</button>
+  </form>
+
+  <div class="footer-text">
+    © 2026 QuickRide. Drive Luxury.
+  </div>
+</div>
+
+</body>
+</html>
