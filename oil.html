@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Oil Change Service | QuickRide</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(#f0f2f5, #e5e7eb);
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background: #000;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        font-size: 28px;
+        letter-spacing: 2px;
+    }
+
+    .container {
+        width: 85%;
+        margin: 30px auto;
+    }
+
+    .section {
+        background: white;
+        padding: 25px;
+        border-radius: 15px;
+        margin-bottom: 25px;
+        box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+        margin-top: 0;
+        font-size: 26px;
+    }
+
+    .icon {
+        font-size: 40px;
+        margin-right: 15px;
+        vertical-align: middle;
+    }
+
+    /* Progress bar */
+    .progress-container {
+        background: #eee;
+        border-radius: 12px;
+        overflow: hidden;
+        height: 22px;
+        margin-top: 15px;
+    }
+
+    .progress-bar {
+        height: 100%;
+        width: 65%;
+        background: #ffaa00;
+    }
+
+    /* Cards */
+    .info-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+    }
+
+    .card {
+        background: #fafafa;
+        padding: 20px;
+        border-radius: 12px;
+        text-align: center;
+        border: 1px solid #ddd;
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    }
+
+    .card .emoji {
+        font-size: 45px;
+        margin-bottom: 10px;
+    }
+
+    /* Table */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+    }
+
+    th, td {
+        padding: 12px;
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+    }
+
+    th {
+        background: #000;
+        color: white;
+    }
+
+    /* Tips list */
+    .tips li {
+        margin-bottom: 8px;
+    }
+
+    /* Back button */
+    .back-btn {
+        background: #000;
+        color: white;
+        padding: 12px 18px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 16px;
+        display: inline-block;
+        margin-top: 10px;
+        transition: 0.3s;
+    }
+    .back-btn:hover { background: #444; }
+
+</style>
+</head>
+
+<body>
+
+<header>QuickRide | Oil Change Service</header>
+
+<div class="container">
+
+    <!-- Basic Description -->
+    <div class="section">
+        <h2><span class="icon">🛢️</span>Oil Change Overview</h2>
+        <p>
+            Regular engine oil changes are essential for keeping your vehicle running smoothly 
+            and improving the lifespan of your engine. This page displays your oil health status, 
+            service frequency, reminders, and recommended tips.
+        </p>
+    </div>
+
+    <!-- Progress & status -->
+    <div class="section">
+        <h2>Oil Health Status</h2>
+        <p><strong>Oil Health Remaining:</strong> 65%</p>
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+        </div>
+        <p style="margin-top:10px; color:#555;">You should plan an oil change soon.</p>
+    </div>
+
+    <!-- Info Cards -->
+    <div class="section">
+        <h2>Quick Info</h2>
+
+        <div class="info-cards">
+
+            <div class="card">
+                <div class="emoji">📅</div>
+                <h3>Last Oil Change</h3>
+                <p>15 Feb 2024</p>
+            </div>
+
+            <div class="card">
+                <div class="emoji">⏳</div>
+                <h3>Next Due</h3>
+                <p>15 Jun 2024</p>
+            </div>
+
+            <div class="card">
+                <div class="emoji">📍</div>
+                <h3>Service Center</h3>
+                <p>QuickRide Premium Garage</p>
+            </div>
+
+            <div class="card">
+                <div class="emoji">💰</div>
+                <h3>Approx Cost</h3>
+                <p>₹3,000 - ₹6,000</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Table -->
+    <div class="section">
+        <h2>Oil Change History</h2>
+
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Car</th>
+                <th>Type of Oil</th>
+                <th>Status</th>
+            </tr>
+            <tr>
+                <td>15 Feb 2024</td>
+                <td>BMW X5</td>
+                <td>Synthetic 5W-30</td>
+                <td style="color:green;">Completed</td>
+            </tr>
+            <tr>
+                <td>01 Sep 2023</td>
+                <td>Audi A6</td>
+                <td>Synthetic 5W-40</td>
+                <td style="color:green;">Completed</td>
+            </tr>
+            <tr>
+                <td>10 Apr 2023</td>
+                <td>Mercedes C-Class</td>
+                <td>Premium 0W-20</td>
+                <td style="color:green;">Completed</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Tips -->
+    <div class="section">
+        <h2>Maintenance Tips</h2>
+        <ul class="tips">
+            <li>✔ Change engine oil every **6,000–10,000 KM**.</li>
+            <li>✔ Always use manufacturer-recommended oil grade.</li>
+            <li>✔ Replace oil filter during every oil change.</li>
+            <li>✔ Warm up your engine before long drives.</li>
+            <li>✔ Check for oil leaks regularly.</li>
+        </ul>
+    </div>
+
+    <a class="back-btn" href="C:\Users\navee\service.html">⬅ Back to Service Page</a>
+
+</div>
+</body>
+</html>

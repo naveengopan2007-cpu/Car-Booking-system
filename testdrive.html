@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Book a Luxury Test Drive</title>
+<style>
+body{
+    margin:0;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:#fff;
+}
+
+.container{
+    max-width:1200px;
+    margin:40px auto;
+    padding:20px;
+}
+
+.header{
+    text-align:center;
+    margin-bottom:40px;
+}
+.header h1{
+    font-size:36px;
+    margin-bottom:10px;
+}
+.header p{
+    color:#ccc;
+}
+
+/* BRAND GRID */
+.brand-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    margin-bottom:40px;
+}
+
+.brand-card{
+    background:rgba(255,255,255,0.08);
+    border-radius:18px;
+    padding:25px;
+    text-align:center;
+    cursor:pointer;
+    transition:all .3s ease;
+    backdrop-filter: blur(8px);
+}
+.brand-card:hover{
+    transform:translateY(-10px) scale(1.02);
+    background:rgba(255,255,255,0.15);
+}
+.brand-logo{
+    font-size:50px;
+    margin-bottom:15px;
+}
+.brand-card h3{
+    margin:10px 0 5px;
+}
+.brand-card span{
+    color:#bbb;
+    font-size:14px;
+}
+
+/* FORM */
+.form-card{
+    background:#fff;
+    color:#333;
+    border-radius:20px;
+    padding:30px;
+    max-width:600px;
+    margin:0 auto;
+    box-shadow:0 20px 40px rgba(0,0,0,.3);
+}
+
+.form-card h2{
+    margin-bottom:20px;
+    text-align:center;
+}
+
+form{
+    display:grid;
+    gap:15px;
+}
+
+input, select{
+    padding:12px;
+    border-radius:10px;
+    border:1px solid #ccc;
+    font-size:15px;
+}
+
+button{
+    padding:14px;
+    background:linear-gradient(135deg,#000,#444);
+    color:#fff;
+    font-size:16px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    transition:.3s;
+}
+button:hover{
+    background:linear-gradient(135deg,#111,#666);
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>🚘 Book a Luxury Test Drive</h1>
+        <p>Select your dream car brand and schedule a test drive</p>
+    </div>
+
+    <!-- BRAND SELECTION -->
+    <div class="brand-grid">
+        <div class="brand-card" onclick="selectBrand('Audi')">
+            <div class="brand-logo">🔴</div>
+            <h3>Audi</h3>
+            <span>Vorsprung durch Technik</span>
+        </div>
+
+        <div class="brand-card" onclick="selectBrand('BMW')">
+            <div class="brand-logo">🔵</div>
+            <h3>BMW</h3>
+            <span>The Ultimate Driving Machine</span>
+        </div>
+
+        <div class="brand-card" onclick="selectBrand('Mercedes-Benz')">
+            <div class="brand-logo">⭐</div>
+            <h3>Mercedes-Benz</h3>
+            <span>The Best or Nothing</span>
+        </div>
+
+        <div class="brand-card" onclick="selectBrand('Lexus')">
+            <div class="brand-logo">🟤</div>
+            <h3>Lexus</h3>
+            <span>Experience Amazing</span>
+        </div>
+
+        <div class="brand-card" onclick="selectBrand('Porsche')">
+            <div class="brand-logo">🟡</div>
+            <h3>Porsche</h3>
+            <span>There Is No Substitute</span>
+        </div>
+
+        <div class="brand-card" onclick="selectBrand('Jaguar')">
+            <div class="brand-logo">🐆</div>
+            <h3>Jaguar</h3>
+            <span>The Art of Performance</span>
+        </div>
+    </div>
+
+    <!-- BOOKING FORM -->
+    <div class="form-card">
+        <h2>📅 Test Drive Details</h2>
+        <form onsubmit="bookTestDrive(event)">
+            <input type="text" id="brand" placeholder="Selected Brand" readonly required>
+            <input type="text" placeholder="Your Name" required>
+            <input type="tel" placeholder="Mobile Number" required>
+            <input type="email" placeholder="Email Address" required>
+
+            <select required>
+                <option value="">Preferred Time</option>
+                <option>Morning</option>
+                <option>Afternoon</option>
+                <option>Evening</option>
+            </select>
+
+            <input type="date" required>
+
+            <button type="submit">Book Test Drive</button>
+        </form>
+    </div>
+
+</div>
+
+<script>
+function selectBrand(name){
+    document.getElementById("brand").value = name;
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+}
+
+function bookTestDrive(e){
+    e.preventDefault();
+    alert("🚗 Test Drive Booked Successfully!\nOur team will contact you soon.");
+}
+</script>
+
+</body>
+</html>

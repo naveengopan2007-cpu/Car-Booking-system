@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Battery Check</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #dfe9f3, #ffffff);
+    padding: 40px;
+}
+
+.container {
+    width: 75%;
+    margin: auto;
+}
+
+.box {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    margin-bottom: 40px;
+}
+
+/* Battery Animation */
+.battery {
+    width: 180px;
+    height: 80px;
+    border: 4px solid #333;
+    border-radius: 10px;
+    position: relative;
+    margin: 20px 0;
+}
+
+.battery:after {
+    content: "";
+    position: absolute;
+    top: 22px;
+    right: -18px;
+    width: 16px;
+    height: 36px;
+    background: #333;
+    border-radius: 3px;
+}
+
+.battery-level {
+    height: 100%;
+    width: 70%; /* Dynamic */
+    background: linear-gradient(90deg, #4caf50, #7ed957);
+    border-radius: 6px;
+    animation: fillAnimation 2s ease-out;
+}
+
+@keyframes fillAnimation {
+    from { width: 0; }
+    to { width: 70%; }
+}
+
+/* Status badges */
+.badges span {
+    background: #e8f5e9;
+    padding: 8px 15px;
+    border-radius: 20px;
+    margin-right: 10px;
+    color: #2e7d32;
+    font-weight: bold;
+    border: 1px solid #c8e6c9;
+}
+
+/* Meter bar */
+.health-bar {
+    width: 100%;
+    background: #eee;
+    border-radius: 10px;
+    height: 18px;
+    margin-top: 10px;
+}
+
+.health-fill {
+    height: 100%;
+    width: 80%;
+    background: #4caf50;
+    border-radius: 10px;
+    animation: grow 2s ease-out;
+}
+
+@keyframes grow {
+    from { width: 0; }
+    to { width: 80%; }
+}
+
+/* Image area */
+.image-box {
+    width: 100%;
+    height: 250px;
+    background: #f0f0f0;
+    border-radius: 12px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+    border: 2px dashed #bbb;
+    font-size: 20px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="box">
+        <h1>🔋 Battery Check</h1>
+        <p>Monitor your car battery's voltage, replacement cycle, charge health, and overall performance.</p>
+
+        <!-- Battery Animation -->
+        <h3>Current Battery Level:</h3>
+        <div class="battery">
+            <div class="battery-level"></div>
+        </div>
+
+        <!-- Status Badges -->
+        <div class="badges">
+            <span>Healthy</span>
+            <span>Charging Properly</span>
+            <span>Last Replaced: 8 months ago</span>
+        </div>
+
+        <!-- Battery Health Meter -->
+        <h3>Battery Health (%)</h3>
+        <div class="health-bar">
+            <div class="health-fill"></div>
+        </div>
+
+        <!-- Image section -->
+        <div class="image-box">
+        
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

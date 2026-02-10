@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>QuickRide | Service & Maintenance</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f4f6f9;
+    }
+
+    header {
+        background: #0d0d0d;
+        color: white;
+        padding: 20px;
+        font-size: 28px;
+        text-align: center;
+        letter-spacing: 2px;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 1100px;
+        margin: auto;
+        margin-top: 30px;
+    }
+
+    .car-select {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 25px;
+    }
+
+    .car-select button {
+        padding: 12px 18px;
+        border: none;
+        background: #000;
+        color: white;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: 0.3s;
+        font-size: 15px;
+    }
+
+    .car-select button:hover {
+        background: #444;
+    }
+
+    .card {
+        background: white;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+        margin-bottom: 25px;
+    }
+
+    .car-title {
+        font-size: 26px;
+        margin-bottom: 10px;
+    }
+
+    .car-image-area {
+        width: 100%;
+        height: 280px;
+        background: #eef1f5;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        border: 1px solid #d3d3d3;
+        margin-bottom: 20px;
+    }
+
+    .car-image-area img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .maintenance-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 20px;
+    }
+
+    .maintenance-item {
+        background: #f9fbfc;
+        border-radius: 12px;
+        padding: 20px;
+        text-align: center;
+        border: 1px solid #e3e3e3;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
+    .maintenance-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 6px 18px rgba(0,0,0,0.15);
+    }
+
+    .icon {
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+
+    .timeline {
+        margin-top: 20px;
+    }
+
+    .timeline-item {
+        background: white;
+        border-left: 5px solid #000;
+        margin: 15px 0;
+        padding: 15px;
+        border-radius: 8px;
+    }
+</style>
+</head>
+
+<body>
+<header>QuickRide | Service & Maintenance</header>
+
+<div class="container">
+
+    <div class="car-select">
+        <button onclick="loadCar('BMW X5')">BMW X5</button>
+        <button onclick="loadCar('Audi A6')">Audi A6</button>
+        <button onclick="loadCar('Range Rover')">Range Rover</button>
+        <button onclick="loadCar('Mercedes C-Class')">Mercedes C-Class</button>
+    </div>
+
+    <!-- Car Details Card -->
+    <div class="card">
+        <h2 id="carName" class="car-title">Select a car to view service history</h2>
+
+        <div class="car-image-area">
+            <img id="carImage" src="" alt="" style="display:none;">
+            <p id="placeholderText" style="color:#666;">Car image will appear here...</p>
+        </div>
+
+    </div>
+
+    <!-- Maintenance Overview -->
+    <div class="card">
+        <h3>Maintenance Overview</h3>
+        <div class="maintenance-list">
+            
+            <div class="maintenance-item" onclick="window.location.href='oil.html'">
+                <div class="icon">🛢️</div>
+                <h4>Oil Change</h4>
+                <p>Track engine oil replacement.</p>
+            </div>
+
+            <div class="maintenance-item" onclick="window.location.href='tyre.html'">
+                <div class="icon">🛞</div>
+                <h4>Tyre Change</h4>
+                <p>Monitor tyre wear cycles.</p>
+            </div>
+
+            <div class="maintenance-item" onclick="window.location.href='battery.html'">
+                <div class="icon">🔋</div>
+                <h4>Battery Check</h4>
+                <p>Battery inspection details.</p>
+            </div>
+
+            <div class="maintenance-item" onclick="window.location.href='C:/Users/navee/OneDrive/Documents/engine.html'">
+                <div class="icon">🛠️</div>
+                <h4>Engine Tune-up</h4>
+                <p>Boost engine performance.</p>
+            </div>
+
+            <div class="maintenance-item" onclick="window.location.href='C:/Users/navee/OneDrive/Documents/brake.html'">
+                <div class="icon">🧯</div>
+                <h4>Brake Service</h4>
+                <p>Brake inspection history.</p>
+            </div>
+
+            <div class="maintenance-item" onclick="window.location.href='C:/Users/navee/OneDrive/Documents/ac.html'">
+                <div class="icon">❄️</div>
+                <h4>AC Service</h4>
+                <p>Cooling and filter maintenance.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Timeline -->
+    <div class="card">
+        <h3>Service History Timeline</h3>
+        <div id="timeline" class="timeline">
+            <p style="color: gray;">No car selected...</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    const carImages = {
+        "BMW X5": "C:/Users/navee/OneDrive/Pictures/iStock-1371885227-2048x1011.webp",
+        "Audi A6": "C:/Users/navee/OneDrive/Pictures/iStock-1371885227-2048x1011.webp",
+        "Range Rover": "C:/Users/navee/OneDrive/Pictures/iStock-1371885227-2048x1011.webp",
+        "Mercedes C-Class": "C:/Users/navee/OneDrive/Pictures/iStock-1371885227-2048x1011.webp"
+    };
+
+    const serviceData = {
+        "BMW X5": [
+            { date: "2024-01-10", task: "Oil Change", status: "Completed" },
+            { date: "2024-02-20", task: "Tyre Rotation", status: "Completed" },
+            { date: "2024-05-02", task: "Brake Service", status: "Pending" }
+        ],
+        "Audi A6": [
+            { date: "2024-03-15", task: "Battery Replacement", status: "Completed" },
+            { date: "2024-04-18", task: "AC Cleaning", status: "Completed" }
+        ],
+        "Range Rover": [
+            { date: "2024-01-05", task: "Engine Tune-up", status: "Completed" }
+        ],
+        "Mercedes C-Class": [
+            { date: "2024-02-12", task: "Oil Change", status: "Completed" },
+            { date: "2024-04-22", task: "Tyre Change", status: "Pending" }
+        ]
+    };
+
+    function loadCar(car) {
+        document.getElementById("carName").innerText = car;
+
+        const img = document.getElementById("carImage");
+        const placeholder = document.getElementById("placeholderText");
+
+        img.src = carImages[car];
+        img.style.display = "block";
+        placeholder.style.display = "none";
+
+        const timeline = document.getElementById("timeline");
+        timeline.innerHTML = "";
+
+        serviceData[car].forEach(item => {
+            timeline.innerHTML += `
+                <div class="timeline-item">
+                    <strong>${item.date}</strong> — ${item.task}
+                    <br>
+                    <span style="color:${item.status === 'Completed' ? 'green' : 'red'};">
+                        ${item.status}
+                    </span>
+                </div>
+            `;
+        });
+    }
+</script>
+
+</body>
+</html>
